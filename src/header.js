@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const NotificationHeader = props => (
     <div className="rn-header">
@@ -8,6 +9,6 @@ const NotificationHeader = props => (
 
 NotificationHeader.displayName = 'NotificationHeader';
 NotificationHeader.proptypes = {
-    children: React.PropTypes.node.isRequired
+    children: PropTypes.node.isRequired
 };
 export default NotificationHeader;

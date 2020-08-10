@@ -114,6 +114,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.3",
-    "element-class": "^0.2.2"
+    "element-class": "^0.2.2",
+    "prop-types": "^15.7.2"
   }
 }

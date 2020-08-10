@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 export default class NotificationContent extends Component {
     constructor(props) {
@@ -37,5 +38,5 @@ export default class NotificationContent extends Component {
 
 NotificationContent.displayName = 'NotificationContent';
 NotificationContent.proptypes = {
-    children: React.PropTypes.node.isRequired
+    children: PropTypes.node.isRequired
 };

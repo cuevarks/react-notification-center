@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 const Tag = props => (
@@ -9,7 +10,7 @@ const Tag = props => (
 
 Tag.displayName = 'NotificationTagComponent';
 Tag.propTypes = {
-    type: React.PropTypes.string.isRequired,
-    children: React.PropTypes.node
+    type: PropTypes.string.isRequired,
+    children: PropTypes.node
 };
 export default Tag;
