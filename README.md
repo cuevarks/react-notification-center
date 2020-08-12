@@ -1,19 +1,19 @@
-# NOT MAINTAINED.
-## NOTE:
-This is not well documented but it will give you an idea on how to start
-## `react-notification-center` [demo](http://diegoddox.github.io/react-notification-center/)
+## `react-notification-center-es6` [demo](http://diegoddox.github.io/react-notification-center/)
+
+## ES6 and updated features added to `react-notification-center`.
+Forked from react-notification-center created by Diego Oliveira (https://github.com/diegoddox). Original repo (https://github.com/diegoddox/react-notification-center)
 
 ### Implementation Guide
 
 #### 1: Installation
-`npm install --save react-notification-center`
+`npm install --save react-notification-center-es6`
 
 #### 2: Import the less file to your project
-`import 'react-notification-center/src/less/index.less'`
+`import 'react-notification-center-es6/src/less/index.less'`
 
 #### 3 Add the notification component
 ```
-import ReactNotificationCenter from 'react-notification-center';
+import ReactNotificationCenter from 'react-notification-center-es6';
 
 export default class App extends Component {
     constructor(props) {
@@ -88,7 +88,4 @@ npm install
 npm start
 ```
 
-open your browser att `http://localhost:4001` and take a look at the file `developement/App.js`
-
-### TODO:
-improve documentation.
+Open your browser at `http://localhost:4001` and take a look at the file `developement/App.js`

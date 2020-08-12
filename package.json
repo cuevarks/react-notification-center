@@ -1,7 +1,7 @@
 {
-  "name": "react-notification-center",
-  "version": "1.2.2",
-  "description": "react-notification-center keep all your notification in a single place",
+  "name": "react-notification-center-es6",
+  "version": "1.2.3",
+  "description": "Forked from react-notification-center created by Diego Oliveira (https://github.com/diegoddox). Original repo (https://github.com/diegoddox/react-notification-center)",
   "main": "lib/index.js",
   "jsnext:main": "./src/notification/index.js",
   "scripts": {
@@ -13,7 +13,8 @@
     "clean": "better-npm-run clean",
     "lint": "better-npm-run lint",
     "build_app": "npm run clean & npm run lint & npm run build & npm run less & npm run less:m",
-    "buildc": "better-npm-run build_client"
+    "buildc": "better-npm-run build_client",
+    "prepublishOnly": "npm run buildc"
   },
   "eslintConfig": {
     "root": true
@@ -27,7 +28,7 @@
       }
     },
     "build_client": {
-      "command": "./node_modules/.bin/webpack --progress --config build/webpack.config.js",
+      "command": "./node_modules/.bin/webpack --progress -p --mode=production --config build/webpack.config.js",
       "env": {
         "NODE_ENV": "production"
       }
@@ -45,7 +46,7 @@
       "command": "node_modules/.bin/rimraf dist lib"
     }
   },
-  "author": "Diego Oliveira",
+  "author": "Cindy Cuevas",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -74,6 +75,7 @@
     "changelog"
   ],
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
     "@babel/eslint-parser": "^7.11.3",
     "@babel/eslint-plugin": "^7.11.3",
@@ -84,6 +86,7 @@
     "@babel/plugin-transform-block-scoping": "^7.11.1",
     "@babel/plugin-transform-classes": "^7.10.4",
     "@babel/plugin-transform-proto-to-assign": "^7.10.5",
+    "@babel/polyfill": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-stage-0": "^7.8.3",
@@ -109,6 +112,7 @@
     "react-hot-loader": "^4.12.21",
     "rimraf": "^3.0.2",
     "style-loader": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^4.1.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
@@ -117,6 +121,7 @@
     "classnames": "^2.2.6",
     "element-class": "^0.2.2",
     "prop-types": "^15.7.2",
+    "uglify-js": "^3.10.1",
     "webpack": "^4.44.1"
   }
 }
