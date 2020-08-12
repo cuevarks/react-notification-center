@@ -1,12 +1,12 @@
 {
   "plugins": [
-    "syntax-class-properties",
-    "transform-class-properties",
-    "transform-decorators-legacy",
-    "transform-es2015-arrow-functions",
-    "transform-es2015-block-scoping",
-    ["transform-es2015-classes", {"loose": true}],
-    "transform-proto-to-assign"
+    "@babel/plugin-proposal-class-properties",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    "@babel/plugin-transform-arrow-functions",
+    "@babel/plugin-transform-block-scoping",
+    ["@babel/plugin-transform-classes", {"loose": true}],
+    "@babel/plugin-transform-proto-to-assign",
+    "@babel/plugin-proposal-function-bind"
   ],
-  "presets": ["stage-0", "react", "es2015"]
+  "presets": ["@babel/preset-react"]
 }

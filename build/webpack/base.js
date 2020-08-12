@@ -1,7 +1,7 @@
-var webpack   = require('webpack');
-var path      = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var config = require('../../config');
+const webpack   = require('webpack');
+const path      = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const config = require('../../config');
 
 module.exports = {
     target: 'web',
@@ -10,31 +10,31 @@ module.exports = {
     },
     output: {
         path: path.join(config.path_base + '/dist'),
-        filename: 'bundle.js',
-        publicPath: ''
+        filename: 'bundle.js'
     },
     module: {
-        preLoaders: [
+        rules: [
             {
+                enforce: 'pre',
                 test: /\.jsx?$/,
-                loaders: ['eslint'],
+                loader: 'eslint-loader',
                 exclude: /node_modules/
-            }
-        ],
-        loaders: [
+            },
             {
                 test: /\.js?$/,
                 exclude: /node_modules/,
-                loaders: ['react-hot', 'babel']
+                loaders: ['react-hot-loader/webpack', 'babel-loader']
             }, {
                 test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
                 exclude: /node_modules/,
                 loader: 'url-loader'
-            }, {
+            },
+            {
                 test: /\.less$/,
                 exclude: /node_modules/,
-                loader: 'style!css!less'
-            }, {
+                use: ['style-loader', 'css-loader', 'less-loader']
+            },
+            {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader'
             }, {

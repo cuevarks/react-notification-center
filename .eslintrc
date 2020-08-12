@@ -1,15 +1,25 @@
 {
-  "parser": "babel-eslint",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parser": "@babel/eslint-parser",
   "env": {
     "browser": true,
     "node": true
   },
-  "ecmaFeatures": {
-    "jsx": true
-  },
   "plugins": [
-    "react"
+    "react",
+    "@babel"
   ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
   "rules": {
     "comma-dangle": [2, "never"],
     "no-cond-assign": 2,

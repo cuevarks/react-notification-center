@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 
 import './index.less';
 import './../src/less/index.less';
-import loremIpsum from 'lorem-ipsum';
+import {loremIpsum} from 'lorem-ipsum';
 import moment from 'moment';
 import uiid from 'uuid';
 import ReactNotificationCenter from './../src/';
