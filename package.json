@@ -12,7 +12,7 @@
     "less:m": "node_modules/.bin/lessc src/less/index.less --autoprefix=\"last 2 versions\" --clean-css lib/css/react-redux-notification.min.css",
     "clean": "better-npm-run clean",
     "lint": "better-npm-run lint",
-    "build_app": "concurrent --kill-others & npm run clean & npm run lint & npm run build & npm run less & npm run less:m",
+    "build_app": "npm run clean & npm run lint & npm run build & npm run less & npm run less:m",
     "buildc": "better-npm-run build_client"
   },
   "eslintConfig": {
@@ -33,10 +33,10 @@
       }
     },
     "build": {
-      "command": "node_modules/.bin/babel src/ --out-dir lib"
+      "command": "./node_modules/.bin/babel src/ --out-dir lib"
     },
     "build:w": {
-      "command": "node_modules/.bin/babel -w src/ --out-dir lib"
+      "command": "./node_modules/.bin/babel -w src/ --out-dir lib"
     },
     "lint": {
       "command": "node_modules/.bin/eslint . --ext .js --ext .jsx || true"

@@ -1,12 +1,15 @@
-const webpack = require('webpack');
 const webpackBase = require('./base');
+const UglifyJsPlugin = require('uglify-js');
 
 webpackBase.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        }
-    })
+    new UglifyJsPlugin({
+        uglifyOptions: {
+            warnings: false,
+            ie8: false,
+            output: {
+                comments: false
+            }
+        }})
 );
 
 module.exports = webpackBase;
